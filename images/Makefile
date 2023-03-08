@@ -17,3 +17,6 @@ export DOCKER_CLI_EXPERIMENTAL=enabled
 
 build: 
 	docker buildx build --platform=${PLATFORMS} $(OUT) --pull --tag $(IMAGE):$(TAG) nginx
+
+add:
+	minikube image load $(IMAGE):$(TAG)
