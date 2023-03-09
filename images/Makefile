@@ -9,8 +9,10 @@ IMAGE = $(REGISTRY)/nginx
 OUT=--load
 
 
-# Going to build with buildx
-PLATFORMS ?=linux/amd64,linux/arm
+# Going to build with buildx. There is a way to build into multiple platforms at the same time
+# I could not do this at the time.
+# PLATFORMS ?=linux/amd64,linux/arm64
+PLATFORMS ?=linux/amd64
 
 # required to enable buildx
 export DOCKER_CLI_EXPERIMENTAL=enabled
