@@ -39,3 +39,10 @@ If you are deploying to a local cluster (eg. minikube) make sure you have the mi
 3. Created terraform config for the minikube cluster and nginx deployment
 4. Created simple monitor script in bash
 5. Created simple monitor script in go
+6. Some cleanup
+
+## Visibility
+
+The Nginx service is made visible with the help of the Nodeport in our Minikube cluster. A Nodeport makes a particular port on a node of our Cluster visible to traffic outside the cluster (If this was deployed in a public facing network any internet traffic could stumble on it). The `minikube service nginx --url` command helps us fetch the actual local url such that we can view our website.
+
+Deploying on a different cluster the best practice approach would be by having an ingress controller help navigate traffic to our Nginx instance.
