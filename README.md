@@ -13,7 +13,7 @@ Make sure you have the following things installed before proceding with the inst
 
 ### Optional Prerequisite
 
-If you are deploying to a local cluster (eg. minikube) make sure you have the minikube cli installed
+If you want to run the go script included, you'd need to have go installed
 
 ## Installation
 
